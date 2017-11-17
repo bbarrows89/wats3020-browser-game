@@ -168,7 +168,7 @@ class TicTacToe {
         // TODO: Create a new `div` element called `newCol`.
         let newCol = document.createElement('div');
 		// TODO: Set the `class` attribute on `newCol` to "col-xs-3".
-        newCol.setAttribute('class', 'col-xs-3';)
+        newCol.setAttribute('class', 'col-xs-3');
 		// TODO: Create a new `span` element called `newTile`.
         let newTile = document.createElement('span');
 		// TODO: Set the `class` attribute on `newTile` to equal the
@@ -186,10 +186,7 @@ class TicTacToe {
         newRow.appendChild(newCol);
       }
 		
-
-		// TODO: Append the `newRow` element to `this.gameboard` as a child element.
-
-		// NOTE: Your first `for` loop should end here.
+      this.gameboard.appendChild(newRow);
     }
 		
 
