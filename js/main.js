@@ -150,12 +150,13 @@ class TicTacToe {
 		// to "show".
 	}
 	setUpBoard(){
-		// TODO: Clear all content from the existing `this.gameboard` element.
     console.log('Setting up game board.');
+
+    this.gameboard.innerHTML = '';
 		// We must draw the game board by using a loop to create rows with
 		// tiles in them. We want to create the same structure as we see in the
 		// index.html file.
-
+    
 		// TODO: Create a `for` loop that will loop three times. The counter
 		// variable in this loop should be called `i`.
 		// TODO: Create a new div element called `newRow
@@ -226,10 +227,6 @@ document.addEventListener('DOMContentLoaded', function(event){
     game.start();
   });
 });
-
-
-// NOTE: End of the `startButton` event listener here.
-
 // NOTE: End of the "DOMContentLoaded" event listener here.
 
 
