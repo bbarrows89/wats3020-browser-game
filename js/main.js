@@ -133,7 +133,7 @@ class TicTacToe {
 		// to them.
     let tileElements = document.querySelectorAll('.tile');
 		// Add all `.tile` elements into a variable called `tileElements`.
-    for (tile of tileElements){
+    for (let tile of tileElements){
       tile.addEventListener('click', handleMove);
     }
 	}
