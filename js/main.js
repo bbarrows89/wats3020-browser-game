@@ -173,7 +173,7 @@ class TicTacToe {
         let newTile = document.createElement('span');
 		// TODO: Set the `class` attribute on `newTile` to equal the
 		// placeholder styles ("tile glyphicon glyphicon-question-sign").
-        newTile.setAttribute('class', 'token glyphicon glyphicon-question-sign');
+        newTile.setAttribute('class', 'tile glyphicon glyphicon-question-sign');
 		// TODO: Set the `data-x` attribute on the `newTile` element
 		// equal to `i`.
         newTile.dataset.x = i;
