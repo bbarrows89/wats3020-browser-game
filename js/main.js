@@ -25,7 +25,7 @@ class TicTacToe {
     this.winScreen = document.querySelector('#win-screen');
     this.winnerToken = document.querySelector('#winner-token');
     this.drawScreen = document.querySelector('#draw-screen');
-    
+
 		// Initialize an Array representing the starting state of the game board.
 		// This is provided for you. We can access the spaces on the board using
 		// (X, Y) coordinates as `this.gameState[x][y]`, which is how the game
@@ -151,7 +151,7 @@ class TicTacToe {
 	}
 	setUpBoard(){
 		// TODO: Clear all content from the existing `this.gameboard` element.
-
+    console.log('Setting up game board.');
 		// We must draw the game board by using a loop to create rows with
 		// tiles in them. We want to create the same structure as we see in the
 		// index.html file.
@@ -198,7 +198,7 @@ class TicTacToe {
 	}
 	initializeMovePrompt(){
 		// This method initializes the `this.movePrompt` element.
-
+    console.log('Initializing Move Prompt.');
 		// TODO: Hide the `this.startPrompt` element by setting the `class`
 		// attribute to "hidden".
 
@@ -209,37 +209,24 @@ class TicTacToe {
 		// TODO: Set `this.currentPlayerToken` class equal to `glyphicon glyphicon-${this.currentPlayer.token}`
 	}
 	start(){
-		// This method handles the logic to create a new game. It primarily has
-		// two duties in the basic version of the game:
-
-		// TODO: Create a new gameboard by calling `this.setUpBoard`
-
-		// TODO: Initialize the move prompt by calling `this.initializeMovePrompt`.
-
+    console.log('Starting game.');
+		// Create a new gameboard by calling `this.setUpBoard`
+    this.setUpBoard();
+		// Initialize the move prompt by calling `this.initializeMovePrompt`.
+    this.initializeMovePrompt();
 	}
 } // End of the Tic Tac Toe Class definition.
 
-// Outside of the Class definitions, we need a few items to control the game
-// so our players can successfull play.
+let game;
 
-// TODO: Add an event listener to the `document` object that will watch for the
-// "DOMContentLoaded" event signal. This listener should execute an anonymous
-// function to handle the "DOMContentLoaded" event.
+document.addEventListener('DOMContentLoaded', function(event){
+  let startButton = document.querySelector('#start-button');
+  startButton.addEventListener('click', function(event){ 
+    game = new TicTacToe();
+    game.start();
+  });
+});
 
-// TODO: Inside the "DOMContentLoaded" event handler, perform the following
-// steps:
-
-// TODO: Select the `#start-button` element from the DOM and save it as a
-// variable called `startButton`.
-
-// TODO: Create an event listener on the `startButton` element that listens for
-// a "click" event and executes an anonymous function to start the game.
-
-// TODO: Inside the `startButton` event listener, instantiate a new
-// instance of the `TicTacToe` class and save it as a variable called
-// `game`.
-
-// TODO: Call the `start()` method of the `game` object you just created.
 
 // NOTE: End of the `startButton` event listener here.
 
