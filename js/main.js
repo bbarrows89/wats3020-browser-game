@@ -203,12 +203,13 @@ class TicTacToe {
     console.log('Initializing Move Prompt.');
 		// TODO: Hide the `this.startPrompt` element by setting the `class`
 		// attribute to "hidden".
-
+    this.startPrompt.setAttribute('class', 'hidden');
 		// TODO: Remove the "hidden" class from the `this.movePrompt` element.
-
+    this.movePrompt.setAttribute('class', '');
 		// TODO: Set `this.currentPlayer` equal to `this.player1`.
-        
-		// TODO: Set `this.currentPlayerToken` class equal to `glyphicon glyphicon-${this.currentPlayer.token}`
+    this.currentPlayer = this.player1;
+    // TODO: Set `this.currentPlayerToken` class equal to `glyphicon glyphicon-${this.currentPlayer.token}`
+    
 	}
 	start(){
     console.log('Starting game.');
