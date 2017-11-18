@@ -228,10 +228,8 @@ function handleMove(event) {
 	console.log('Handling player move.');
 	// Record the move for the current player.
 	game.recordMove(event);
-
 	// Check to see if the last move was a winning move.
 	game.checkForWinner();
-
 	// Rotate players.
 	game.switchPlayer();
 }
