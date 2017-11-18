@@ -137,12 +137,14 @@ class TicTacToe {
 		}
 		this.currentPlayerToken.setAttribute('class', `glyphicon glyphicon-${this.currentPlayerToken}`);
 	}
+
 	setUpTileListeners() {
 		console.log('Setting up tile listeners.');
 		let tileElements = document.querySelectorAll('.tile');
 		for (let tile of tileElements) {
+			let self = this;
 			tile.addEventListener('click', function(event){
-				let openTile = this.checkLegal();
+				let openTile = self.checkLegal();
 				if (openTile) {
 					this.handleMove(event);
 				}
