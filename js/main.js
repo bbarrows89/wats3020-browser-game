@@ -1,16 +1,17 @@
 /* A tic tac toe game for two players. */
 
 class Player {
-	constructor(token) {
+	constructor(token, color) {
 		this.token = token;
+		this.color = color;
 	}
 }
 
 // Tic Tac Toe Game Class
 class TicTacToe {
 	constructor() {
-		this.player1 = new Player('remove-sign');
-		this.player2 = new Player('unchecked');
+		this.player1 = new Player('remove-sign', 'blue');
+		this.player2 = new Player('unchecked', 'yellow');
 
 		this.currentPlayer = null;
 		this.gameStatus = null;
@@ -125,7 +126,7 @@ class TicTacToe {
 		let tileX = event.target.dataset.x;
 		let tileY = event.target.dataset.y;
 		this.gameState[tileX][tileY] = this.currentPlayer.token;
-		event.target.setAttribute('class', `tile played glyphicon glyphicon-${this.currentPlayer.token}`);
+		event.target.setAttribute('class', `tile played glyphicon glyphicon-${this.currentPlayer.token} ${this.currentPlayer.color}`);
 	}
 
 	switchPlayer() {
