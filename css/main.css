@@ -51,11 +51,18 @@
     background: rgba(253, 255, 252, 0.1);
 
 }
-.tile.played {
+.tile.played.yellow {
     color: rgba(255, 186, 8, 1);
     background: rgba(253, 255, 252, 0.1);
     cursor: pointer;
 }
+
+.tile.played.blue {
+    color: rgb(84, 167, 245);
+    background: rgba(253, 255, 252, 0.1);
+    cursor: pointer;
+}
+
 .game-title {
     text-align: center;
 }
