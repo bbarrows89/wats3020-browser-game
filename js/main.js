@@ -109,13 +109,22 @@ class TicTacToe {
 		}
 	}
 
+	checkLegal(event) {
+		console.log('Checking if tile is open.');
+		let tileX = event.target.dataset.x;
+		let tileY = event.target.dataset.y;
+		if (this.gameState[tileX][tileY] === null) {
+			return true;
+		}	else {
+			alert('Please choose an empty tile.');
+		}
+	}
+
 	recordMove(event) {
 		console.log('Recording move.');
 		let tileX = event.target.dataset.x;
 		let tileY = event.target.dataset.y;
-		if (event.target.dataset.x === null || event.target.dataset.y === null) {
-			this.gameState[tileX][tileY] = this.currentPlayer.token;
-		}
+		this.gameState[tileX][tileY] = this.currentPlayer.token;
 		event.target.setAttribute('class', `tile played glyphicon glyphicon-${this.currentPlayer.token}`);
 	}
 
@@ -132,7 +141,12 @@ class TicTacToe {
 		console.log('Setting up tile listeners.');
 		let tileElements = document.querySelectorAll('.tile');
 		for (let tile of tileElements) {
-			tile.addEventListener('click', handleMove);
+			tile.addEventListener('click', function(event){
+				let openTile = this.checkLegal();
+				if (openTile) {
+					this.handleMove(event);
+				}
+			});
 		}
 	}
 
