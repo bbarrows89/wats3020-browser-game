@@ -144,7 +144,7 @@ class TicTacToe {
 		for (let tile of tileElements) {
 			let self = this;
 			tile.addEventListener('click', function(event){
-				let openTile = self.checkLegal();
+				let openTile = self.checkLegal(event);
 				if (openTile) {
 					this.handleMove(event);
 				}
