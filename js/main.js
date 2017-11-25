@@ -212,7 +212,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		game.start();
 	});
 });
-// NOTE: End of the "DOMContentLoaded" event listener here.
 
 document.addEventListener('win', function (event) {
 	console.log('Detected win event.');
