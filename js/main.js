@@ -126,7 +126,7 @@ class TicTacToe {
 		let tileX = event.target.dataset.x;
 		let tileY = event.target.dataset.y;
 		this.gameState[tileX][tileY] = this.currentPlayer.token;
-		event.target.setAttribute('class', `tile played glyphicon glyphicon-${this.currentPlayerToken}
+		event.target.setAttribute('class', `tile played glyphicon glyphicon-${this.currentPlayer.token}
 		 ${this.currentPlayer.color}`);
 	}
 
@@ -137,7 +137,7 @@ class TicTacToe {
 		} else {
 			this.currentPlayer = this.player1;
 		}
-		this.currentPlayerToken.setAttribute('class', `glyphicon glyphicon-${this.currentPlayerToken}`);
+		this.currentPlayerToken.setAttribute('class', `glyphicon glyphicon-${this.currentPlayer.token}`);
 	}
 	setUpTileListeners() {
 		console.log('Setting up tile listeners.');
