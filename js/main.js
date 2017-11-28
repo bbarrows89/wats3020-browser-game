@@ -191,7 +191,7 @@ class TicTacToe {
 		this.startPrompt.setAttribute('class', 'hidden');
 		this.movePrompt.setAttribute('class', '');
 		this.currentPlayer = this.player1;
-		this.currentPlayerToken.setAttribute('class', `glyphicon glyphicon-${this.currentPlayerToken}`);
+		this.currentPlayerToken.setAttribute('class', `glyphicon glyphicon-${this.currentPlayer.token}`);
 	}
 
 	start() {
